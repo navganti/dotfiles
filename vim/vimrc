@@ -1,7 +1,12 @@
-function! Vundle()
+" Vim Configuration File
+" Author: Nav Ganti (http://www.github.com/navganti/dotfiles/vim)
+" Note: Built off of Christopher Choi's Vim configuration
+" (http://www.github.com/chutsu/dotfiles/vim)
 
-	set nocompatible 		" be iMproved, required
-	filetype off			" required
+" Vundle setup
+function! Vundle()
+    	set nocompatible              " be iMproved, required
+	filetype off       
 
 	" set the runtime path to include Vundle and initialize
 	set rtp+=~/.vim/bundle/Vundle.vim
@@ -11,6 +16,13 @@ function! Vundle()
 	
 	" let Vundle manage Vundle, required
 	Plugin 'gmarik/Vundle.vim'
+
+	" Plugins
+	Plugin 'tpope/vim-fugitive'	" Git wrapper for vim
+	Plugin 'tpope/vim-surround'	" Enhancement for surroundings: parentheses, brackets, etc.
+	Plugin 'tomtom/tcomment_vim'	" Sensible comment toggling
+	Plugin 'scrooloose/nerdtree'	" Tree explorer plugin for vim	
+	Plugin 'Xuyuanp/nerdtree-git-plugin'	" Git status indicator for each file in nerdtree
 
 
 	" All of your Plugins must be added before the following line
@@ -27,3 +39,21 @@ function! Vundle()
 	" see :h vundle for more details or wiki for FAQ
 	" Put your non-Plugin stuff after this line
 endfunction
+
+" Start NERDTree with every Vim instance
+function! StartNERDTree()
+	autocmd VimEnter * NERDTree
+endfunction
+
+" Paramters for appearance
+function! EditorAppearance()
+	syntax on
+	set number
+endfunction
+
+
+
+" MAIN
+call Vundle()
+call StartNERDTree()
+call EditorAppearance()
