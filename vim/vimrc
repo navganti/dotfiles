@@ -51,9 +51,15 @@ function! EditorAppearance()
 	set number
 endfunction
 
+function! EscapeCommonOperationTypos()
+	cmap Wq wq
+	cmap WQ wq
+	map <C-n> <TAB>
+endfunction
 
 
 " MAIN
 call Vundle()
 call StartNERDTree()
 call EditorAppearance()
+call EscapeCommonOperationTypos()
