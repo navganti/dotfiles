@@ -22,8 +22,6 @@ function! Vundle()
 	Plugin 'tpope/vim-surround'	" Enhancement for surroundings: parentheses, brackets, etc.
 	Plugin 'tomtom/tcomment_vim'	" Sensible comment toggling
 	Plugin 'scrooloose/nerdtree'	" Tree explorer plugin for vim	
-	Plugin 'Xuyuanp/nerdtree-git-plugin'	" Git status indicator for each file in nerdtree
-
 
 	" All of your Plugins must be added before the following line
 	call vundle#end()		" required
@@ -60,6 +58,6 @@ endfunction
 
 " MAIN
 call Vundle()
-call StartNERDTree()
+" call StartNERDTree()
 call EditorAppearance()
 call EscapeCommonOperationTypos()
