@@ -1,7 +1,5 @@
 " Vim Configuration File
 " Author: Nav Ganti (http://www.github.com/navganti/dotfiles/vim)
-" Note: Built off of Christopher Choi's Vim configuration
-" (http://www.github.com/chutsu/dotfiles/vim)
 
 " Vundle setup
 function! Vundle()
@@ -19,9 +17,14 @@ function! Vundle()
 
 	" Plugins
 	Plugin 'tpope/vim-fugitive'	" Git wrapper for vim
-	Plugin 'tpope/vim-surround'	" Enhancement for surroundings: parentheses, brackets, etc.
-	Plugin 'tomtom/tcomment_vim'	" Sensible comment toggling
-	Plugin 'scrooloose/nerdtree'	" Tree explorer plugin for vim	
+	Plugin 'tpope/vim-surround'	" Enhancement for surroundings: parentheses, brackets, etc.	
+	Plugin 'vim-airline/vim-airline'  " Status/tabline for vim
+	Plugin 'vim-airline/vim-airline-themes'  "Airline themes
+	Plugin 'NLKNguyen/papercolor-theme'  "Theme
+	Plugin 'octol/vim-cpp-enhanced-highlight'  "C++ Syntax
+	Plugin 'godlygeek/tabular'
+	Plugin 'plasticboy/vim-markdown'
+	Plugin 'scrooloose/nerdtree'
 
 	" All of your Plugins must be added before the following line
 	call vundle#end()		" required
@@ -38,26 +41,24 @@ function! Vundle()
 	" Put your non-Plugin stuff after this line
 endfunction
 
-" Start NERDTree with every Vim instance
-function! StartNERDTree()
-	autocmd VimEnter * NERDTree
-endfunction
-
 " Paramters for appearance
 function! EditorAppearance()
 	syntax on
 	set number
+	set laststatus=2
+	set background=dark
+	colorscheme PaperColor
 endfunction
 
 function! EscapeCommonOperationTypos()
 	cmap Wq wq
 	cmap WQ wq
+	cmap Q q
 	map <C-n> <TAB>
 endfunction
 
 
 " MAIN
 call Vundle()
-" call StartNERDTree()
 call EditorAppearance()
 call EscapeCommonOperationTypos()
