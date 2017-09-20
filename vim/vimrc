@@ -48,6 +48,8 @@ function! EditorAppearance()
 	set laststatus=2
 	set background=dark
 	colorscheme PaperColor
+
+	let g:airline_theme='papercolor'
 endfunction
 
 function! EscapeCommonOperationTypos()
