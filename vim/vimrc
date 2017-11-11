@@ -56,6 +56,7 @@ function! EscapeCommonOperationTypos()
 	cmap Wq wq
 	cmap WQ wq
 	cmap Q q
+	cmap W w
 	map <C-n> <TAB>
 endfunction
 
