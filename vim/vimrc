@@ -47,6 +47,7 @@ function! EditorAppearance()
 	set number
 	set laststatus=2
 	set background=dark
+	set t_Co=256
 	colorscheme PaperColor
 
 	let g:airline_theme='papercolor'
