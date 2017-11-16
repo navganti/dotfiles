@@ -119,6 +119,8 @@ fi
 # Software Aliases
 alias clion='/home/pganti/Software/CLion/bin/clion.sh'
 alias pycharm='/home/pganti/Software/PyCharm/bin/pycharm.sh'
+alias anaconda="export PATH="/home/pganti/Software/Anaconda/anaconda3/bin:$PATH""
+
 
 # Project Aliases
 alias moose="cd /home/pganti/git/autonomoose/rospackages/autonomoose_core"
