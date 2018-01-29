@@ -5,9 +5,14 @@
   title_receive_bg_color = "#f80049"
   title_transmit_bg_color = "#0072b0"
 [keybindings]
+  broadcast_all = None
+  broadcast_group = <Alt>a
   broadcast_off = <Shift><Alt>a
   cycle_next = None
   cycle_prev = None
+  group_all = None
+  group_tab = None
+  group_tab_toggle = <Shift><Super>a
   next_tab = <Primary>Tab
   prev_tab = <Primary><Shift>Tab
   split_horiz = <Primary><Alt>minus
@@ -31,4 +36,3 @@
     palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#ffffff"
     scrollback_infinite = True
     use_system_font = False
-  [[Nav]]

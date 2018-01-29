@@ -117,10 +117,8 @@ if ! shopt -oq posix; then
 fi
 
 # Software Aliases
-alias clion='/home/pganti/Software/CLion/bin/clion.sh'
+alias clion='/home/pganti/Software/clion-2017.3/bin/clion.sh'
 alias pycharm='/home/pganti/Software/PyCharm/bin/pycharm.sh'
-alias anaconda="export PATH="/home/pganti/Software/Anaconda/anaconda3/bin:$PATH""
-
 
 # Project Aliases
 alias moose="cd /home/pganti/git/autonomoose/rospackages/autonomoose_core"
@@ -128,9 +126,8 @@ alias moose_docs="cd ~/git/moose_docs_internal && git pull && python -m SimpleHT
 
 alias wave="cd /home/pganti/git/libwave"
 alias kalibr="cd /home/pganti/kalibr_workspace/src/Kalibr"
-alias catkin_ws="cd /home/pganti/catkin_ws"
-
-
+alias ctkn="cd /home/pganti/catkin_ws"
+alias rosbags="cd /home/pganti/rosbags"
 
 # Closing terminal 
 alias :q="exit"
@@ -138,6 +135,20 @@ alias :Q="exit"
 alias :wq="exit"
 alias :WQ="exit"
 alias :Wq="exit"
+
+# Set ROS to use sim time
+alias sim_time="rosparam set use_sim_time true"
+
+# Aliases for linking folders to catkin_ws
+alias link_moose="ln -s ~/git/autonomoose"
+alias link_renesas="ln -s ~/git/renesas-demo"
+alias link_caribou="ln -s ~/git/road-demo"
+
+# Activate tensorflow
+alias tnsflw="source ~/tensorflow/bin/activate"
+
+# Pip
+alias pip='pip2.7'
 
 # Source environment variables
 source /opt/ros/kinetic/setup.bash
@@ -151,7 +162,6 @@ parse_git_branch() {
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 alias glg='git log --date-order --all --graph --format="%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
-
 
 export VREP_ROOT=/home/pganti/opt/vrep/V-REP_PRO_EDU_V3_4_0_Linux
 source ~/anm_sim/vrep_test_suite/scripts/test_suite_lib.bash
