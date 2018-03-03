@@ -147,6 +147,9 @@ alias link_caribou="ln -s ~/git/road-demo"
 # Activate tensorflow
 alias tnsflw="source ~/tensorflow/bin/activate"
 
+# Moose bags
+alias moosebag="rosrun image_transport republish compressed in:=/ximea_camera_cam_f out:=/moose_cam"
+
 # Pip
 alias pip='pip2.7'
 
@@ -168,3 +171,6 @@ source ~/anm_sim/vrep_test_suite/scripts/test_suite_lib.bash
 
 export TURTLEBOT_3D_SENSOR=kinect
 
+export CITYSCAPES_DATASET=/home/pganti/Datasets/cityscapes
+
+# export ROS_MASTER_URI=192.168.1.12
