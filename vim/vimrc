@@ -1,5 +1,6 @@
 " Vim Configuration File
 " Author: Nav Ganti (http://www.github.com/navganti/dotfiles/vim)
+" Based off of @chutsu's (https://github.com/chutsu/dotfiles/tree/master/vim) configuration.
 
 " Vundle setup
 function! Vundle()
