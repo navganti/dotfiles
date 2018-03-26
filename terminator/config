@@ -35,6 +35,7 @@
     font = Monospace 11
     foreground_color = "#ffffff"
     palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#ffffff"
+    scroll_on_output = False
     scrollback_infinite = True
     use_system_font = False
   [[nav]]
