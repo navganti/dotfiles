@@ -117,17 +117,10 @@ if ! shopt -oq posix; then
 fi
 
 # Software Aliases
-alias clion='/home/pganti/Software/clion-2017.3/bin/clion.sh'
-alias pycharm='/home/pganti/Software/PyCharm/bin/pycharm.sh'
+alias clion='snap run clion'
+alias pycharm='/home/pganti/Software/pycharm-community-2018.2.4/bin/pycharm.sh'
 
-# Project Aliases
-alias moose="cd /home/pganti/git/autonomoose/rospackages/autonomoose_core"
-alias moose_docs="cd ~/git/moose_docs_internal && git pull && python -m SimpleHTTPServer"
-
-alias wave="cd /home/pganti/git/libwave"
-alias kalibr="cd /home/pganti/kalibr_workspace/src/Kalibr"
-alias ctkn="cd /home/pganti/catkin_ws"
-alias rosbags="cd /home/pganti/rosbags"
+alias tandem='/home/pganti/Software/Tandem/Tandemx86_641.2.1.AppImage'
 
 # Closing terminal 
 alias :q="exit"
@@ -136,19 +129,8 @@ alias :wq="exit"
 alias :WQ="exit"
 alias :Wq="exit"
 
-# Set ROS to use sim time
-alias sim_time="rosparam set use_sim_time true"
-
-# Aliases for linking folders to catkin_ws
-alias link_moose="ln -s ~/git/autonomoose"
-alias link_renesas="ln -s ~/git/renesas-demo"
-alias link_caribou="ln -s ~/git/road-demo"
-
 # Activate tensorflow
 alias tnsflw="source ~/tensorflow/bin/activate"
-
-# Moose bags
-alias moosebag="rosrun image_transport republish compressed in:=/ximea_camera_cam_f out:=/moose_cam"
 
 # Pip
 alias pip='pip2.7'
@@ -156,7 +138,6 @@ alias pip='pip2.7'
 # Source environment variables
 source /opt/ros/kinetic/setup.bash
 source ~/catkin_ws/devel/setup.bash
-source ~/kalibr_workspace/devel/setup.bash 
 
 ## Git enhancement
 parse_git_branch() {
@@ -165,15 +146,6 @@ parse_git_branch() {
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 alias glg='git log --date-order --all --graph --format="%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
-
-export VREP_ROOT=/home/pganti/opt/vrep/V-REP_PRO_EDU_V3_4_0_Linux
-source ~/anm_sim/vrep_test_suite/scripts/test_suite_lib.bash
-
-export TURTLEBOT_3D_SENSOR=kinect
-
-export CITYSCAPES_DATASET=/home/pganti/Datasets/cityscapes
-
-# export ROS_MASTER_URI=192.168.1.12
 
 # Specify CUDA_HOME for Tensorflow
 export CUDA_HOME=/usr/local/cuda-9.0
@@ -184,9 +156,6 @@ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 
 # Append LD_LIBRARY_PATH for Tensorflow
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
-
-# Add caffe-segnet-cudnn7 to PYTHONPATH
-export PYTHONPATH=/home/pganti/git/caffe-segnet-cudnn7/python:$PYTHONPATH 
 
 alias search="apt-cache search "
 alias install="sudo apt-get install "
