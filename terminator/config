@@ -31,17 +31,18 @@
   [[default]]
     background_color = "#202020"
     background_darkness = 0.0
-    background_image = None
+    cursor_color = "#ffffff"
     font = Monospace 11
     foreground_color = "#ffffff"
     palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#ffffff"
-    scroll_on_output = False
+    scroll_on_output = True
     scrollback_infinite = True
+    scrollbar_position = hidden
     use_system_font = False
   [[nav]]
     background_color = "#202020"
     background_darkness = 0.0
-    background_image = None
+    cursor_color = "#ffffff"
     font = Monospace 11
     foreground_color = "#ffffff"
     palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#ffffff"
