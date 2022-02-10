@@ -116,22 +116,40 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Closing terminal
-alias :q="exit"
-alias :Q="exit"
-alias :wq="exit"
-alias :WQ="exit"
-alias :Wq="exit"
-
 # Git enhancement
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+# CUDA
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+# Software Aliases
+alias pycharm="snap run pycharm-community"
+alias obsidian="/home/nav/Software/Obsidian/Obsidian-0.12.19.AppImage"
+
+# CRD alias
+alias crdstart="xrandr --output DP-0 --mode 2560x1440 --rate 59.95 && /opt/google/chrome-remote-desktop/chrome-remote-desktop --start"
+alias crdstop="/opt/google/chrome-remote-desktop/chrome-remote-desktop --stop && xrandr --output DP-0 --mode 2560x1440 --rate 144.00"
+
+# Processing
+alias processing="/home/nav/Software/processing-3.5.4/processing"
+
+# ImageMagick
+alias magick="/home/nav/Software/ImageMagick/magick"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Pyenv
-export PATH="/home/nav/.pyenv/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 # >>> conda initialize >>>
@@ -149,10 +167,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# CUDA
-export PATH=/usr/local/cuda-10.1/bin:${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
-# Software Aliases
-alias pycharm="snap run pycharm-community"
+export PM_PACKAGES_ROOT=$HOME/packman-repo
 
